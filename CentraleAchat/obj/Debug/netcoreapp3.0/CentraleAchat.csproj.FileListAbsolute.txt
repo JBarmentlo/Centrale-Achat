@@ -1,0 +1,11 @@
+C:\Users\Joep\source\repos\CentraleAchat\CentraleAchat\bin\Debug\netcoreapp3.0\CentraleAchat.exe
+C:\Users\Joep\source\repos\CentraleAchat\CentraleAchat\bin\Debug\netcoreapp3.0\CentraleAchat.deps.json
+C:\Users\Joep\source\repos\CentraleAchat\CentraleAchat\bin\Debug\netcoreapp3.0\CentraleAchat.runtimeconfig.json
+C:\Users\Joep\source\repos\CentraleAchat\CentraleAchat\bin\Debug\netcoreapp3.0\CentraleAchat.runtimeconfig.dev.json
+C:\Users\Joep\source\repos\CentraleAchat\CentraleAchat\bin\Debug\netcoreapp3.0\CentraleAchat.dll
+C:\Users\Joep\source\repos\CentraleAchat\CentraleAchat\bin\Debug\netcoreapp3.0\CentraleAchat.pdb
+C:\Users\Joep\source\repos\CentraleAchat\CentraleAchat\obj\Debug\netcoreapp3.0\CentraleAchat.csprojAssemblyReference.cache
+C:\Users\Joep\source\repos\CentraleAchat\CentraleAchat\obj\Debug\netcoreapp3.0\CentraleAchat.AssemblyInfoInputs.cache
+C:\Users\Joep\source\repos\CentraleAchat\CentraleAchat\obj\Debug\netcoreapp3.0\CentraleAchat.AssemblyInfo.cs
+C:\Users\Joep\source\repos\CentraleAchat\CentraleAchat\obj\Debug\netcoreapp3.0\CentraleAchat.dll
+C:\Users\Joep\source\repos\CentraleAchat\CentraleAchat\obj\Debug\netcoreapp3.0\CentraleAchat.pdb
