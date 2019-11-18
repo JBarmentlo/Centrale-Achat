@@ -16,7 +16,7 @@ namespace CentraleAchat
 
         public void AddArticleToPanier(Article article, int quantite)
         {
-            throw new NotImplementedException();
+            Articles.Add(new KeyValuePair<Article, int>(article, quantite));
         }
         public void ModifyQuantityInPanier(Article article, int newQuantity)
         {

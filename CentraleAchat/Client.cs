@@ -11,13 +11,17 @@ namespace CentraleAchat
         {
             Panier = new Panier(this);
         }
-
         public void CommanderPanier(Centrale centrale)
         {
             foreach (KeyValuePair<Article, int> articleQtePair in Panier.Articles)
             {
                 //articleQtePair.Key.Vendeur.AddToBonus(this, articleQtePair.Key.Price * articleQtePair.Value);
-                articleQtePair.Key.Stock -= articleQtePair.Value;
+                if (articleQtePair.Key.Stock >= articleQtePair.Value)
+                    articleQtePair.Key.Stock -= articleQtePair.Value;
+                else
+                {
+                    Console.WriteLine(articleQtePair.Key.Name + " is out of stock. you ordered " + articleQtePair.Value + "and there are " + articleQtePair.Key.Stock + " left in stack.");
+                }
             }
             Panier.Articles.Clear();
         }
