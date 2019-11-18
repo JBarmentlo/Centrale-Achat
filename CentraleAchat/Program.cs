@@ -6,29 +6,7 @@ namespace CentraleAchat
     class Program
     {
         //la fonction LoginTryCatch s'apelle elle meme, on apelle ca un fonction recursive;
-        static User LoginTryCatch(string mail, string passwd, Centrale centrale)
-        {
-            // if empty user list in centrale => infinite loop
-            User user = null;
-            try
-            {
-                user = centrale.Login(mail, passwd);
-            }
-            catch (ArgumentNullException)
-            {
-                Console.WriteLine("Wrong email, try again");
-                mail = Console.ReadLine();
-                LoginTryCatch(mail, passwd, centrale);
-            }
-            catch (ArgumentException)
-            {
-                Console.WriteLine("Wrong password, try again");
-                passwd = Console.ReadLine();
-                LoginTryCatch(mail, passwd, centrale);
-            }
-            return (user);
 
-        }
         static void Main(string[] args)
         {
             Centrale centrale = new Centrale();
@@ -37,7 +15,13 @@ namespace CentraleAchat
             Console.WriteLine("Enter password ");
             string passwd = Console.ReadLine();
 
-            LoginTryCatch(mail, passwd, centrale);
+            User client = new Client("jean", "moi@gmail.com", "pass");
+            User vendeur = new Vendeur("Momo", "momo@gmail.com", "pass");
+            centrale.Users.Add(client);
+            centrale.Users.Add(vendeur);
+
+            User LogClient = centrale.LoginTryCatch(mail, passwd);
+            Console.WriteLine(LogClient.Nom);
 
 
 

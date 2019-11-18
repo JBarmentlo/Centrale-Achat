@@ -4,7 +4,7 @@ using System.Text;
 
 namespace CentraleAchat
 {
-    abstract class User
+    public abstract class User
     {
         public string Nom { get; set; }
         public string Mail { get; set; }

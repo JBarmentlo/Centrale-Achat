@@ -25,9 +25,12 @@ namespace CentraleAchat
         }
         public User             Login(string mail, string password)
         {
-            User LoggingIn = Users.Where((user) => user.Mail.Equals(mail)).First();
+            List<User> tmp = Users.Where((user) => user.Mail.Equals(mail)).ToList();
+            User LoggingIn = null;
+            if (tmp.Count() > 0)
+                LoggingIn = tmp.First();
             if (LoggingIn == null)
-                throw new ArgumentNullException("email not registered");
+                throw new ArgumentException("email not registered");
             if (LoggingIn.Password == password)
                 return LoggingIn;
             else
@@ -68,6 +71,25 @@ namespace CentraleAchat
         public bool             ConfirmAccount(User user, string confirmationString)
         {
             throw new NotImplementedException();
+        }
+
+        public  User LoginTryCatch(string mail, string passwd)
+        {
+            // if empty user list in centrale => infinite loop
+            User user = null;
+            try
+            {
+                user = this.Login(mail, passwd);
+            }
+            catch (ArgumentException)
+            {
+                Console.WriteLine("Wrong email, try again");
+                mail = Console.ReadLine();
+                Console.WriteLine("Wrong password, try again");
+                passwd = Console.ReadLine();
+                LoginTryCatch(mail, passwd);
+            }
+            return (user);
         }
     }
 }

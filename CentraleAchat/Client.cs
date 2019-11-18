@@ -16,12 +16,10 @@ namespace CentraleAchat
         {
             foreach (KeyValuePair<Article, int> articleQtePair in Panier.Articles)
             {
-                articleQtePair.Key.Vendeur.AddToBonus(this, articleQtePair.Key.Price * articleQtePair.Value);
+                //articleQtePair.Key.Vendeur.AddToBonus(this, articleQtePair.Key.Price * articleQtePair.Value);
                 articleQtePair.Key.Stock -= articleQtePair.Value;
             }
-            //envoyer les commandes aux vendeurs concernes
-            //comptes les achats pour les bonus (cote vendeur)
-            //vider le panier
+            Panier.Articles.Clear();
         }
         public void Comment(Article article, string comment)
         {

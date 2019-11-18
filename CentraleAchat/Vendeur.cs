@@ -18,15 +18,16 @@ namespace CentraleAchat
         }
         public void AddArticle(Article article, Centrale centrale)
         {
-            throw new NotImplementedException();
+            Articles.Add(article);
+            centrale.AddArticle(article);
         }
-        public void AddArticleToStock(Article article, int stock, Centrale centrale)
+        public void AddArticleToStock(Article article, int stock)
         {
-            throw new NotImplementedException();
+            article.Stock += stock;
         }
-        public void DeactivateArticle(Article article, Centrale centrale)
+        public void DeactivateArticle(Article article)
         {
-            throw new NotImplementedException();
+            article.Active = false;
         }
         public void GererCommentaires()
         {
